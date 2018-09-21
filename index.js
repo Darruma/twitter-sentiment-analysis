@@ -13,6 +13,6 @@ var T = new Twit({
 
 T.get('statuses/user_timeline', { screen_name: 'realDonaldTrump', count: 200 }, function(err, data, response) {
   data.forEach(element => {
-	  console.log(sentiment.analyze(element.text));
+	  console.log(sentiment.analyze(element.text.score));
   });
 })
